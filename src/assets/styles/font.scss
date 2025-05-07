@@ -1,0 +1,32 @@
+$Exo: ("BoldItalic", 700);
+
+@each $name,
+$weight in $Exo {
+    @font-face {
+        src: url(../fonts/Exo/Exo2-#{$name}.ttf);
+        font-family: "Exo";
+        font-weight: $weight;
+    }
+}
+
+$ProtestStrike: ("Regular", 400);
+
+@each $name,
+$weight in $ProtestStrike {
+    @font-face {
+        src: url(../fonts/ProtestStrike/ProtestStrike-#{$name}.ttf);
+        font-family: "ProtestStrike";
+        font-weight: $weight;
+    }
+}
+
+$Roboto: ("Medium", 500);
+
+@each $name,
+$weight in $Roboto {
+    @font-face {
+        src: url(../fonts/Roboto/Roboto-#{$name}.ttf);
+        font-family: "Roboto";
+        font-weight: $weight;
+    }
+}

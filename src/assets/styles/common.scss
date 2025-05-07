@@ -1,0 +1,43 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto";
+}
+
+html,body {
+   scroll-behavior: smooth;
+}
+
+.container {
+   max-width: 1320px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+input, textarea, button {
+   border: none;
+   outline: none;
+}
+button {
+   padding: 10px 15px;
+ background-color: #76b1ec;
+   border: none;
+   color: white;
+   border-radius: 28%;
+   font-size: 20px;
+   cursor: pointer;
+
+   &:hover {
+     background-color: #929ab1;
+   }
+ }

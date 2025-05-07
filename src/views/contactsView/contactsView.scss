@@ -1,0 +1,122 @@
+
+.contacts-view {
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   padding: 60px 0;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+   .form-section {
+     flex: 0 0 50%;
+     .contact-form {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+ 
+       .input-group {
+         display: flex;
+         flex-direction: column;
+         text-align: left;
+         
+         label {
+           font-size: 1rem;
+           color: #76b1ec;
+           margin-bottom: 5px;
+         }
+ 
+         input,
+         textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #9cebf3;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+            width: 70%;
+ 
+           &:focus {
+             border-color: #0073e6;
+           }
+         }
+ 
+         textarea {
+           resize: vertical;
+           min-height: 150px;
+         }
+       }
+ 
+       .submit-button {
+         background-color: #0073e6;
+         color: white;
+         padding: 10px;
+         border: none;
+         width: 157px;
+         border-radius: 5px;
+         font-size: 1.2rem;
+         cursor: pointer;
+         transition: background-color 0.3s;
+ 
+         &:hover {
+           background-color: #005bb5;
+         }
+       }
+     }
+   }
+ 
+   .info-section {
+     flex: 0 0 45%;
+     padding: 20px;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+     h3 {
+       font-size: 1.8rem;
+       color: #333;
+       margin-bottom: 20px;
+     }
+ 
+     .contact-info {
+       font-size: 1.2rem;
+       color: #555;
+       margin-bottom: 20px;
+ 
+       a {
+         color: #0073e6;
+         text-decoration: none;
+ 
+         &:hover {
+           text-decoration: underline;
+         }
+       }
+     }
+ 
+     .map-container {
+       margin-top: 20px;
+       
+       iframe {
+         width: 100%;
+         max-width: 400px;
+         border-radius: 8px;
+       }
+     }
+   }
+ }
+ .contacts__title{
+   font-weight: 600;
+   margin-bottom: 30px;
+   font-size: 3rem;
+      color: #8eacec;
+ }
+ .contacts__text {
+   margin: 5px;
+ }
+ .from-section {
+   display:grid;
+   gap: 20px;
+ }
+ .contacts-view >.container {
+   border-radius: 1px solid aqua;
+ }

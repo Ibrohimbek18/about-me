@@ -1,0 +1,140 @@
+.navbar {
+  background: rgba(134, 179, 197, 0.445);
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 0;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+.nav__link {
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 20px;
+  &:hover {
+    color: #443a38;
+  }
+
+  @media (width <= 530px) {
+    font-size: 30px;
+  }
+}
+img {
+  height: 100px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+
+  @media (width <= 530px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+  }
+}
+.nav__item {
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #c2bebd;
+  }
+}
+
+.nav__burger {
+  display: none;
+}
+
+@media (width <= 530px) {
+  .nav__burger {
+    margin-left: auto;
+    position: relative;
+    width: 45px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  .nav__burger-line {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: rgba(118, 118, 118);
+    transition: 0.2s;
+    border-radius: 2px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background: rgba(118, 118, 118);
+      position: absolute;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  .nav__burger-line.active {
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 0;
+      height: 4px;
+      border-radius: 2px;
+    }
+  }
+}
+
+@media (width <= 530px) {
+  .nav__menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: rgb(71, 71, 71, 0.9);
+    height: 100dvh;
+    z-index: 10;
+    min-height: 600px;
+    display: grid;
+    place-items: center;
+    transform: scaleY(0);
+    transition: 0.5s;
+    transform-origin: top;
+    border-bottom: solid 5px var(--primary-color);
+    border-top: solid 5px var(--primary-color);
+
+    &.active {
+      transform: scaleY(1);
+    }
+  }
+}
